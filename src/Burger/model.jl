@@ -8,23 +8,9 @@ type BurgerData <: SpectralDataField
   x :: Array{Float64,2}
 end
 
+export BurgerModel, BurgerData, 
+include("trunes.jl")
 
-type TruneExternalBurgerSS <: TruneOptions
-  n_off :: Int64
-  x :: BurgerData
-end
-
-type TruneExternalBurgerSV <: TruneOptions
-  n_off :: Int64
-  x :: BurgerData
-end
-
-type TruneExternalBurgerSVSS <: TruneOptions
-  n_off :: Int64
-  x :: BurgerData
-end
-
-export BurgerModel, BurgerData, TruneExternalBurgerSS, TruneExternalBurgerSV, TruneExternalBurgerSVSS
 include("timegradient.jl")
 
 function +(x:: BurgerData, y :: BurgerData) 

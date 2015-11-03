@@ -18,6 +18,7 @@ type ExternalResolveBurgerLL <: ExternalAdectionResolver
   x :: BurgerData
 end
 
+
 export ExternalResolveBurgerLL, ExternalResolveBurgerLS, ExternalResolveBurgerSL, ExternalResolveBurgerSS
 
 include("advectionResolves.jl")
