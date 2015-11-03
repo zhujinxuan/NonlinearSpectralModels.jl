@@ -8,7 +8,7 @@ type BurgerData <: SpectralDataField
   x :: Array{Float64,2}
 end
 
-export BurgerModel, BurgerData, 
+export BurgerModel, BurgerData
 include("trunes.jl")
 
 include("timegradient.jl")
