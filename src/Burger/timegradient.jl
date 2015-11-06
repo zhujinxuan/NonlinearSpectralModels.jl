@@ -63,7 +63,7 @@ function timegradient( m :: BurgerModel, x:: BurgerData, TR :: TruneExternalBurg
   return BurgerData(x.n,diffusion + advectionLL + advectionSL + advectionLS + advectionSS)
 end
 
-function timegradient( m :: BurgerModel, x:: BurgerData, TR :: TruneBurgerExternalSSDynamicLS)
+function timegradient( m :: BurgerModel, x:: BurgerData, TR :: TruneExternalBurgerSSDynamicSV)
   xx = x.x
   diffusion =  - m.d * ([1:x.n;]).^2 .* xx
   advectionLL = advection(m, x, ResolveLL(TR.n_off))
@@ -72,5 +72,6 @@ function timegradient( m :: BurgerModel, x:: BurgerData, TR :: TruneBurgerExtern
   advectionSL = advection(m, x, ResolveSL(TR.n_off))
   return BurgerData(x.n,diffusion + advectionLL + advectionSL + advectionLS + advectionSS)
 end
+
 
 export timegradient
