@@ -19,9 +19,5 @@ type TruneExternalBurgerSVSS <: TruneOptions
   x :: BurgerData
 end
 
-type TruneBurgerExternalSSDynamicLS <: TruneOptions
-  n_off :: Int64
-  x :: BurgerData
-end
 
 export TruneExternalBurgerSS, TruneExternalBurgerSV, TruneExternalBurgerSVSS, TruneExternalBurgerSSDynamicSV
