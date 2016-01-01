@@ -21,8 +21,7 @@ type TruneSV <: TruneOptions
   n_off :: Int64
 end
 
-type TruneNone <: TruneOptions 
-end
+immutable TruneNone <: TruneOptions end
 
 export TruneSS, TruneNone,  TruneAllS, TruneSV, TruneOptions
 
